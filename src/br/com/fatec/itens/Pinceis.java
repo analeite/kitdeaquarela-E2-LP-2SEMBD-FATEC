@@ -1,4 +1,4 @@
-package br.com.fatec.kitaquarela;
+package br.com.fatec.itens;
 
 public class Pinceis {
 	
@@ -7,9 +7,15 @@ public class Pinceis {
 	public String nome;
 	public String marca;
 	public String material;
-	public int quantidade;
-	public int preco;
+	public String quantidade;
+	public String preco;
 	
+	//Método Construtor	
+	public Pinceis(String nome) {
+		super();
+		this.nome = nome;
+	}
+
 	//Getters e Setters
 	public String getNome() {
 		return nome;
@@ -35,25 +41,26 @@ public class Pinceis {
 		this.material = material;
 	}
 
-	public int getQuantidade() {
+	public String getQuantidade() {
 		return quantidade;
 	}
 
-	public void setQuantidade(int quantidade) {
+	public void setQuantidade(String quantidade) {
 		this.quantidade = quantidade;
 	}
 
-	public int getPreco() {
+	public String getPreco() {
 		return preco;
 	}
 
-	public void setPreco(int preco) {
+	public void setPreco(String preco) {
 		this.preco = preco;
 	}	
 	
 	//Método de identificação de kit de pincéis
-	public void classificacaoTinta() {
-		if(quantidade >= 2) {
+	public void quantidadePinceis() {
+		int quantidadeConvertida = Integer.parseInt(quantidade);
+		if(quantidadeConvertida >= 2) {
 			System.out.println("Esse produto é um kit com " + quantidade + " pincéis.");
 		} else {
 			System.out.println("Esse kit possui apenas um pincél.");

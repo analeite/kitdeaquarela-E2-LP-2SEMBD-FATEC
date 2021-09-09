@@ -1,4 +1,4 @@
-package br.com.fatec.kitaquarela;
+package br.com.fatec.itens;
 
 public class Tintas {
 
@@ -8,8 +8,14 @@ public class Tintas {
 	public String marca;
 	public String tipo;
 	public String quantidade;
-	public int preco;
+	public String preco;
 	
+	//Método Construtor
+	public Tintas(String nome) {
+		super();
+		this.nome = nome;
+	}
+
 	//Getters e Setters
 	public String getNome() {
 		return nome;
@@ -18,7 +24,7 @@ public class Tintas {
 	public void setNome(String nome) {
 		this.nome = nome;
 	}
-	
+//	
 	public String getMarca() {
 		return marca;
 	}
@@ -43,23 +49,24 @@ public class Tintas {
 		this.quantidade = quantidade;
 	}
 	
-	public int getPreco() {
+	public String getPreco() {
 		return preco;
 	}
 	
-	public void setPreco(int preco) {
+	public void setPreco(String preco) {
 		this.preco = preco;
 	}
 
 	
 	//Método de Classificação da Tinta
 	public void classificacaoTinta() {
-		if (preco >= 120) {
+		int precoConvertido = Integer.parseInt(preco);
+		if (precoConvertido >= 120) {
 			System.out.println("A tinta "+ nome + " é semi-profissional.");
-		} if(preco >= 200) {
+		} else if(precoConvertido >= 270) {
 			System.out.println("A tinta "+ nome + " é profissional.");
-		} else {
-			System.out.println("A tinta "+ nome + " é para estudantes.");
+		} else if(precoConvertido <= 100) {
+			System.out.println("A tinta "+ nome + " é para estudantes/iniciantes.");
 		}
 	}
 	
