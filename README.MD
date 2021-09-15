@@ -13,7 +13,7 @@
 * src > main > br > com > fatec > kitaquarela: pasta contendo a classe TesteKitAquarela, que insere os dados dos itens Tintas, Pinceis e BlocoAquarela.
 
 ### Imagem utilizada como inspiração: 
-![kitaquarela](https://www.julianarabelo.com/wp-content/uploads/2020/03/aquarela-iniciantes-julianarabelo-00.png)
+![kitaquarela](kitaquarela.png)
 
 ### IDE: Eclipse.
 
